@@ -11,12 +11,13 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import com.test.client.service.exception.ClientNotFoundException;
 import com.test.client.service.model.Client;
+import com.test.client.service.service.impl.ClientServiceImpl;
 
 @ExtendWith(MockitoExtension.class)
 public class ClientServiceTest {
 
     @InjectMocks
-    private ClientService clientService;
+    private ClientServiceImpl clientService;
     
     @Test
     void getClientInfo_WithValidData_ShouldReturnClient() {
