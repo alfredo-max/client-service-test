@@ -22,19 +22,23 @@ public class ClientServiceImpl implements ClientService {
         logger.info("Retrieving client info for document type: {} and number: {}", documentType, documentNumber);
         
         if (VALID_DOCUMENT_TYPE.equals(documentType) && VALID_DOCUMENT_NUMBER.equals(documentNumber)) {
-            return new Client(
-                "Juan", 
-                "Carlos", 
-                "Rodríguez", 
-                "Gómez", 
-                "3102224455", 
-                "Calle 123 # 45-67", 
-                "Bogotá"
-            );
+           return createMockedClient();
         }
         
         logger.warn("Client not found for document type: {} and number: {}", documentType, documentNumber);
         throw new ClientNotFoundException("No se encontró un cliente con el tipo de documento " 
                 + documentType + " y número " + documentNumber);
+    }
+
+    private Client createMockedClient() {
+        return Client.builder()
+        .firstName("Juan")
+        .secondName("Carlos")
+        .firstLastName("Rodríguez")
+        .secondLastName("Gómez")
+        .phoneNumber("3102224455")
+        .address("Calle 123 # 45-67")
+        .city("Bogotá")
+        .build();
     }
 }
