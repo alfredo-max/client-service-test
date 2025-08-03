@@ -14,7 +14,7 @@ import com.test.client.service.model.Client;
 import com.test.client.service.service.ClientService;
 
 @RestController
-@RequestMapping("/api/clients")
+@RequestMapping("/clients")
 @Validated
 public class ClientController {
 
