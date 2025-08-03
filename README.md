@@ -61,7 +61,7 @@ La aplicación se iniciará en el puerto 8090.
 
 ### Consultar información de un cliente
 
-**Endpoint**: GET /api/clients/info
+**Endpoint**: GET /clients/info
 
 **Parámetros de consulta**:
 - `documentType`: Tipo de documento (obligatorio). Valores válidos: C (cédula) o P (pasaporte)
