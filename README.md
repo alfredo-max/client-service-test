@@ -69,7 +69,7 @@ La aplicación se iniciará en el puerto 8090.
 
 **Ejemplo de solicitud**:
 ```
-GET http://localhost:8090/api/clients/info?documentType=C&documentNumber=23445322
+GET http://localhost:8090/clients/info?documentType=C&documentNumber=23445322
 ```
 
 **Respuesta exitosa** (Código 200):
