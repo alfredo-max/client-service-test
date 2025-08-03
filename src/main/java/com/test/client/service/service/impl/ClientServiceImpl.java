@@ -19,12 +19,11 @@ public class ClientServiceImpl implements ClientService {
     
     @Override
     public Client getClientInfo(String documentType, String documentNumber) {
-        logger.info("Retrieving client info for document type: {} and number: {}", documentType, documentNumber);
-        
+
         if (VALID_DOCUMENT_TYPE.equals(documentType) && VALID_DOCUMENT_NUMBER.equals(documentNumber)) {
            return createMockedClient();
         }
-        
+
         logger.warn("Client not found for document type: {} and number: {}", documentType, documentNumber);
         throw new ClientNotFoundException("No se encontró un cliente con el tipo de documento " 
                 + documentType + " y número " + documentNumber);
